@@ -1,0 +1,16 @@
+server:
+  port: 3412
+
+spring:
+  application:
+    name: Spring-Gateway
+  cloud:
+    gateway:
+      routes:
+        - id: grpc-client
+          uri: http://127.0.0.1:6742
+          predicates:
+            - Path=/api/grpc-client/**
+          filters:
+            - StripPrefix=2
+
