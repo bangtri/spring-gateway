@@ -7,7 +7,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: grpc-client
+        - id: GRPC-Client
           uri: http://127.0.0.1:6742
           predicates:
             - Path=/api/grpc-client/**

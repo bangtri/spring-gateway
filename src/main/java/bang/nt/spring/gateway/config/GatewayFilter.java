@@ -25,7 +25,7 @@ public class GatewayFilter implements GlobalFilter {
             Route route = exchange.getAttribute(GATEWAY_ROUTE_ATTR);
             URI routeUri = exchange.getAttribute(GATEWAY_REQUEST_URL_ATTR);
             if (Objects.nonNull(route)) {
-                log.info("Incoming request " + originalUri.toString() + " is routed to id: " + route.getId() + ", uri:" + routeUri);
+                log.info("Incoming request " + originalUri.toString() + " is routed to id: " + route.getId() + ", uri: " + routeUri);
             }
         }
         return chain.filter(exchange);
